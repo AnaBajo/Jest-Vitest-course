@@ -1,0 +1,24 @@
+button, button:focus {
+    border: none;
+}
+button.red:hover {
+    border-color: transparent;
+}
+.red {
+    background-color: red;
+}
+.blue {
+    background-color: blue;
+}
+/* button:disabled {
+    background-color: gray;
+} */
+.gray {
+    background-color: gray;
+}
+.medium-violet-red {
+    background-color: mediumvioletred;
+}
+.midnight-blue {
+    background-color: midnightblue;
+}
