@@ -1,0 +1,21 @@
+// https://mswjs.io/docs/basics/mocking-responses#json-responses
+import { http, HttpResponse } from 'msw'
+ 
+export const handlers = [
+  http.get('http://localhost:3030/scoops', () => {
+    // Note that you DON'T have to stringify the JSON!
+    return HttpResponse.json([
+        {name: 'Chocolate', imagePath: "/images/chocolate.png"},
+        {name: 'Vanilla', imagePath: "/images/vanilla.png"},
+
+    ])
+  }),
+  http.get('http://localhost:3030/toppings', () => {
+    // Note that you DON'T have to stringify the JSON!
+    return HttpResponse.json([
+        {name: 'Cherries', imagePath: "/images/cherries.png"},
+        {name: 'M&Ms', imagePath: "/images/m-and-ms.png"},
+        {name: 'Hot fudge', imagePath: "/images/hot-fudge.png"},
+    ])
+  }),
+]
